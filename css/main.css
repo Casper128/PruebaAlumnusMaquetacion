@@ -1,0 +1,133 @@
+/* ==========================================================================
+HELPERS CLASSES
+========================================================================== */
+:root {
+  --main-size: 1.5rem;
+  --main-color: #704aec;
+  --second-color: #11e7a5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.map {
+  line-height: 1;
+}
+.map iframe {
+  width: 100%;
+}
+
+/* ==========================================================================
+GENERAL
+========================================================================== */
+.btn-primary {
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-bg: color-mix(in oklab, var(--main-color) 70%, black);
+  --bs-btn-hover-border-color: color-mix(in oklab, var(--main-color) 70%, black);
+}
+
+a {
+  color: var(--main-color);
+}
+a:hover {
+  color: var(--main-color);
+}
+
+.container,
+.container-xxl,
+.container-xl,
+.container-fluid {
+  padding-inline: var(--main-size);
+}
+
+.section {
+  padding-block: calc(var(--main-size) * 2);
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding-block: calc(var(--main-size) * 3);
+  }
+}
+/* ==========================================================================
+MAIN HEADER
+========================================================================== */
+#main-header {
+  position: sticky;
+  top: 0;
+  background-color: #FFF;
+  z-index: 99;
+}
+#main-header .navbar-brand img {
+  max-width: 6.25rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--main-color);
+}
+
+@media (min-width: 1200px) {
+  .navbar-nav li {
+    margin-left: 1rem;
+  }
+}
+.section-title h1 {
+  color: var(--main-color);
+  font-weight: 700;
+}
+
+.list-courses .course h3 {
+  color: color-mix(in oklab, var(--main-color) 70%, black);
+}
+
+.list-students .student img {
+  display: block;
+  width: 9.375rem;
+  margin-inline: auto;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+#main-footer .logo-footer {
+  max-width: 6.25rem;
+}
+
+.cover {
+  position: relative;
+  z-index: 3;
+}
+
+.cover__background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 50%;
+  z-index: 5;
+}
+
+.cover__image-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  background-position: top;
+  z-index: 4;
+  top: 0;
+}
+
+.cover__inner-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+}
